@@ -27,20 +27,6 @@ const typeDefs = gql`
       email: String
       bookCount: [Book]
   }
-
-  type Book {
-      bookId: String
-      authors: [Authors]
-      description: String
-      title: String
-      image: String
-      link: String
-  }
-
-  type Auth {
-      token: ID!
-      user: User
-  }
 `;
 
 // export the typeDefs

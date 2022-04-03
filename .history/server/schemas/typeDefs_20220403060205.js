@@ -24,22 +24,7 @@ const typeDefs = gql`
   type User {
       _id: ID
       username: String
-      email: String
-      bookCount: [Book]
-  }
-
-  type Book {
-      bookId: String
-      authors: [Authors]
-      description: String
-      title: String
-      image: String
-      link: String
-  }
-
-  type Auth {
-      token: ID!
-      user: User
+      e
   }
 `;
 
