@@ -8,7 +8,7 @@ import { REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
 
-  const { error, data, refetch } = useQuery(GET_ME);
+  const { loading, error, data, refetch } = useQuery(GET_ME);
 
   useEffect (() => {
     refetch();
@@ -40,7 +40,6 @@ const SavedBooks = () => {
     catch (error) {
       console.log(error)
     }
-  };
 
   return (
     <>
@@ -76,6 +75,5 @@ const SavedBooks = () => {
     </>
   );
 };
-
 
 export default SavedBooks;

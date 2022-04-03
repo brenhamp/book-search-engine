@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import { useQuery, useMutation } from '@apollo/client';
+import { deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
+import { removeBookId } from '../utils/localStorage';
 
 import { GET_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
 
-  const { error, data, refetch } = useQuery(GET_ME);
+  const { loading, error, data, refetch } = useQuery(GET_ME);
 
   useEffect (() => {
     refetch();
@@ -40,7 +42,6 @@ const SavedBooks = () => {
     catch (error) {
       console.log(error)
     }
-  };
 
   return (
     <>
@@ -76,6 +77,5 @@ const SavedBooks = () => {
     </>
   );
 };
-
 
 export default SavedBooks;

@@ -40,7 +40,7 @@ const SavedBooks = () => {
     catch (error) {
       console.log(error)
     }
-  };
+  
 
   return (
     <>

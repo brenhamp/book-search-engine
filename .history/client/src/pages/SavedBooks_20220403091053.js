@@ -40,7 +40,6 @@ const SavedBooks = () => {
     catch (error) {
       console.log(error)
     }
-  };
 
   return (
     <>
@@ -76,6 +75,5 @@ const SavedBooks = () => {
     </>
   );
 };
-
 
 export default SavedBooks;
