@@ -16,7 +16,7 @@ const startServer = async () => {
     resolvers,
     plugins: [
       ApolloServerPluginLandingPageGraphQLPlayground(),
-    ],
+    ]
     context: authMiddleware
   });
   await server.start();
